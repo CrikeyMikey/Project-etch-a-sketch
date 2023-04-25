@@ -1,4 +1,4 @@
-const gridSize = 4
+const gridSize = 32
 const gridDiv = document.querySelector(".gridDiv")
 
 const createGrid = (gridSize) => {
@@ -7,8 +7,11 @@ const createGrid = (gridSize) => {
         row.classList.add('grid-row')
 
         for (let j = 0; j < gridSize; j++) {
+            const widthAndHeight = 600 / gridSize;
             const gridBox = document.createElement('div')
             gridBox.classList.add('grid-box')
+            gridBox.style.width = `${widthAndHeight}px`
+            gridBox.style.height = `${widthAndHeight}px`
             row.appendChild(gridBox)
         }
         gridDiv.appendChild(row);
