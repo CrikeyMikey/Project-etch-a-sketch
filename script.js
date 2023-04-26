@@ -13,7 +13,7 @@ const createGrid = (gridSize) => {
         row.classList.add('grid-row')
 
         for (let j = 0; j < gridSize; j++) {
-            const widthAndHeight = 600 / gridSize;
+            const widthAndHeight = 550 / gridSize;
             const gridBox = document.createElement('div')
     //Adds functionality for boxes to fill in when mouse enters them
             gridBox.classList.add('grid-box')
@@ -35,7 +35,7 @@ createGrid(gridSize)
 resetBtn.addEventListener("click", () => {
     let userSize = Number(prompt('What size would you like the board to be?'))
 
-    while(userSize > 100) {
+    while(userSize > 80) {
         userSize = Number(prompt('Pick a smaller number, 100 or less'))
     }
 
